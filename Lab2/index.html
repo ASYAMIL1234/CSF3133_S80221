@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+    <style>
+        table, th, td { border: 1px solid black; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>CSF3133 Course Feedback</h1>
+</header><!-- the closing tag should be </header> and not </head> -->
+<nav>
+    <a href="index.html#results">Results</a> |
+    <a href="index.html#comments">Comments</a> |
+    <a href="feedback.html">Feedback Form</a>
+</nav>
+<section id="results">
+    <h2>Feedback Summary</h2>
+    <table border="1">
+        <tr>
+            <th>Week</th>
+            <th>Topic</th>
+            <th>Rating</th><!-- Closing tag is wrong, change from </td> to </th> -->
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Introduction to HTML</td>
+            <td>4.5</td>
+        </tr><!-- it has no closing, add </tr> -->
+        <tr>
+            <td>2</td>
+            <td colspan="2">Tables and Forms</td><!-- colspan set to 3, make the table columns one size big. change to 2-->
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Semantic HTML</td><!-- missing </td> -->
+            <td>4.0</td>
+        </tr>
+        <!-- Part 2: Week 4 and 5 share the same topic, so Topic uses rowspan="2" -->
+        <tr>
+            <td>4</td>
+            <td rowspan="2">Mini Project</td>
+            <td>4.2</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>4.6</td>
+        </tr>
+        <!-- Part 2: Average Rating row spans Week and Topic columns -->
+        <tr>
+            <td colspan="2">Average Rating</td>
+            <td>4.3</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Part 2: Student Comments section with two articles -->
+<section id="comments">
+    <h2>Student Comments</h2>
+    <article>
+        <h3>Ali</h3>
+        <p>The table and form labs were very clear and easy to follow.</p>
+    </article>
+    <article>
+        <h3>Siti</h3>
+        <p>The mini project helped me apply everything we learned.</p>
+    </article>
+</section>
+
+<footer>
+    <p>Copyright &copy; 2026 CSF3133</p><!-- &copy doesnt have semi colon -->
+</footer>
+</body>
+</html>

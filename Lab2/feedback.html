@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Feedback Form</title>
+    <style>
+        table, th, td { border: 1px solid black; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>CSF3133 Course Feedback</h1>
+</header>
+<!-- Same nav as index.html: links to index.html sections use the file name before the # -->
+<nav>
+    <a href="index.html#results">Results</a> |
+    <a href="index.html#comments">Comments</a> |
+    <a href="feedback.html">Feedback Form</a>
+</nav>
+<section id="form">
+    <h2>Give Your Feedback</h2>
+    <form action="submit_feedback.php" method="post">
+        <label for="fullname">Name:</label><!-- for="name" doesnt match id="fullname"-->
+        <input type="text" id="fullname" name="name"><br>
+
+        <!-- Part 2: E-mail input with matching label -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <!-- Radio buttons share name="rating" so only one can be selected -->
+        <label>Overall rating:</label><br>
+        <input type="radio" id="good" name="rating" value="good">
+        <label for="good">Good</label>
+        <input type="radio" id="average" name="rating" value="average">
+        <label for="average">Average</label>
+        <input type="radio" id="poor" name="rating" value="poor">
+        <label for="poor">Poor</label><br>
+
+        <input type="checkbox" id="lab" name="lab" value="yes">
+        <label for="lab">I attended all labs</label><br><!-- id and for dont match-->
+
+        <!-- Part 2: checkbox group for topics needing more practice -->
+        <p>Topics I want more practice on:</p>
+        <input type="checkbox" id="practiceTables" name="practice" value="tables">
+        <label for="practiceTables">Tables</label><br>
+        <input type="checkbox" id="practiceForms" name="practice" value="forms">
+        <label for="practiceForms">Forms</label><br>
+        <input type="checkbox" id="practiceSemantic" name="practice" value="semantic">
+        <label for="practiceSemantic">Semantic HTML</label><br>
+
+        <!-- Part 2: drop-down list for Section/Group -->
+        <label for="group">Section/Group:</label>
+        <select id="group" name="group">
+            <option value="01">Section 01</option>
+            <option value="02">Section 02</option>
+            <option value="03">Section 03</option>
+        </select><br>
+
+        <input type="submit" value="Submit">
+    </form><!-- wrong closing </from>. change to </form> -->
+</section>
+<footer>
+    <p>Copyright &copy; 2026 CSF3133</p><!-- &copy doesnt have semi colon -->
+</footer>
+</body>
+</html>
