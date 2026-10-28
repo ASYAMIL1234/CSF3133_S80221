@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programming Workshop</title>
+        <style>
+            table, th, td { border: 1px solid black; }
+        </style>
+    </head>
+    <body>
+
+        <!-- event name and tagline -->
+        <header>
+            <h1>Programming Workshop</h1>
+            <p>Learn by building, one line at a time.</p>
+        </header>
+
+        <!-- Navigation to jump using id -->
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#register">Register</a>
+        </nav>
+        
+                <!-- Event schedule table -->
+        <section id="schedule">
+            <h2>Event Schedule</h2>
+            <table border="1">
+                <!-- Header row -->
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+                <!-- data row 1 -->
+                <tr>
+                    <td>8:30 AM</td>
+                    <td>Registration</td>
+                    <td>Main Lobby</td>
+                    <td>Secretariat</td>
+                </tr>
+                <!-- data row 2 -->
+                <tr>
+                    <td>9:00 AM</td>
+                    <td>Opening Ceremony</td>
+                    <td rowspan="2">Dewan Sultan Mizan</td>
+                    <td>Club President</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>Talk: Introduction to Programming</td>
+                    <td>Dr. Aminah Rahman</td>
+                </tr>
+                <!-- data row 3 lunchbreak (put colspan so it dont seperate into section for this activity-->
+                <tr>
+                    <td>12:30 PM</td>
+                    <td colspan="3">Lunch Break</td>
+                </tr>
+                <!-- data row 4 use rowspan cuz it use the same place as data row 5 -->
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Workshop: Build Your First Web Page</td>
+                    <td rowspan="2">Computer Lab 1</td>
+                    <td>Mr. Hafiz Ismail</td>
+                </tr>
+                <!-- data row 5 -->
+                <tr>
+                    <td>3:30 PM</td>
+                    <td>Workshop: Java Basics</td>
+                    <td>Ms. Nurul Huda</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>Closing and Prize Giving</td>
+                    <td>Dewan Sultan Mizan</td>
+                    <td>Club President</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- About section -->
+        <section id="about">
+            <h2>About the Event</h2>
+            <p>A one-day hands-on workshop that introduces students to programming fundamentals.</p>
+
+            <!-- introduces the speaker -->
+                <h3>Speaker: Dr. Aminah Rahman</h3>
+                <p>Senior lecturer in Software Engineering with 15 years of teaching experience.</p>
+
+            <!-- introduces an activity -->
+                <h3>Activity: Build Your First Web Page</h3>
+                <p>Participants write and publish a simple HTML page by the end of the session.</p>
+        
+        </section>
+
+        <!-- Registration form -->
+        <section id="register">
+            <h2>Registration</h2>
+            <form action="register.html" method="post">
+
+                <p>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                </p>
+                <p>
+                    <label for="matric">Matric Number:</label>
+                    <input type="text" id="matric" name="matric">
+                </p>
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </p>
+
+                <!-- Radio buttons -->
+                <p>Year of Study:<br>
+                    <input type="radio" id="year1" name="year" value="1">
+                    <label for="year1">Year 1</label>
+                    <input type="radio" id="year2" name="year" value="2">
+                    <label for="year2">Year 2</label>
+                    <input type="radio" id="year3" name="year" value="3">
+                    <label for="year3">Year 3</label>
+                    <input type="radio" id="year4" name="year" value="4">
+                    <label for="year4">Year 4</label>
+                </p>
+
+                <!-- Checkboxes -->
+                <p>Sessions to Join:<br>
+                    <input type="checkbox" id="talk" name="sessions" value="talk">
+                    <label for="talk">Introduction to Programming Talk</label><br>
+                    <input type="checkbox" id="webpage" name="sessions" value="webpage">
+                    <label for="webpage">Build Your First Web Page</label><br>
+                    <input type="checkbox" id="java" name="sessions" value="java">
+                    <label for="java">Java Basics</label>
+                </p>
+
+                <!-- Drop-down list -->
+                <p>
+                    <label for="programme">Programme:</label>
+                    <select id="programme" name="programme">
+                        <option value="se">Software Engineering</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="it">Information Technology</option>
+                        <option value="math">Mathematics</option>
+                    </select>
+                </p>
+
+                <!-- Submit button -->
+                <p>
+                    <button type="submit" onclick="alert('Success')">Register</button>
+                </p>
+            </form>
+        </section>
+
+        <footer>
+            <p>Organised by UMT Programming Club</p>
+        </footer>
+
+    </body>
+</html>
