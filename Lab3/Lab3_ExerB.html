@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+<!--
+    ERROR LIST
+    Error 1  (Line 1):  <!DOCTYPE> is incomplete.
+    Error 2  (Line 9):  Tags wrongly nested </h1> closed before </span>.
+    Error 3  (Line 11): <span id="content"> is an inline element but contains block elements.
+    Error 4  (Line 13): Raw "<" in text replaced with the entity &lt;
+    Error 5  (Line 13): "&amp" is missing semicolon
+    Error 6  (Line 14): adult.value + child.value joins strings ("2" + "3" = "23"). Converted to numbers with Number().
+    Error 7  (Line 18): type="emial" is a typo
+    Error 8  (Line 22/23): list="movies" does not match datalist id="movielist", so no suggestions appeared. Both now use "movielist".
+    Error 9  (Line 28/30): Ticket inputs had no min, so negative tickets were allowed. Added min="0".
+    Error 10 (Line 32): Range has min="5" max="1" (reversed), so the slider behaved strangely. Fixed to min="1" max="5" step="1".
+    Error 11 (Line 33): output for="adult kid" refers to a non-existent id "kid". Fixed to for="adult child".
+    Error 12 (Line 36): Closing </span> for content. Changed to </div> to match Error 3.
+    Error 13 (Line 38): &Copy; is the wrong. change to &copy;
+    Error 14 (Line 41): Duplicate </body> and </html> tags after the end of the document
+-->
+
+
+<div id="header">
+    <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+</div>
+
+<!-- Content -->
+<div id="content">
+    <h2>Book Your Ticket</h2>
+    <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+
+    <form action="booking.php" oninput="total.value = Number(adult.value || 0) + Number(child.value || 0); price.value = Number(adult.value || 0) * 12 + Number(child.value || 0) * 8">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="e.g. student@umt.edu.my" required><br>
+
+        <!-- phone number input -->
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. 012-3456789" required><br>
+
+        <label for="date">Show date:</label>
+        <input type="date" id="date" name="date"><br>
+
+        <!-- show time input -->
+        <label for="time">Show time:</label>
+        <input type="time" id="time" name="time"><br>
+
+        <label for="movie">Movie:</label>
+        <input id="movie" name="movie" list="movielist"><br>
+        <datalist id="movielist">
+            <option value="Space Rangers">
+            <option value="Kampung Comedy">
+            <option value="Ombak Terengganu">
+        </datalist>
+
+        <label for="adult">Adult tickets (RM 12):</label>
+        <input type="number" id="adult" name="adult" min="0" value="0"><br>
+
+        <label for="child">Child tickets (RM 8):</label>
+        <input type="number" id="child" name="child" min="0" value="0"><br>
+
+        <label for="rating">Rate our service:</label>
+        <input type="range" id="rating" name="rating" min="1" max="5" step="1"><br>
+
+        Total tickets: <output name="total" for="adult child">0</output><br>
+
+        <!-- total price output (adult RM 12, child RM 8) -->
+        Total price: RM <output name="price" for="adult child">0</output><br>
+
+        <input type="submit" value="Book Now">
+    </form>
+</div>
+
+<!-- sidebar listing movies now showing -->
+<div id="sidebar">
+    <h2>Now Showing</h2>
+    <ul>
+        <li><strong>Space Rangers</strong> <span>(PG13)</span> <a href="https://www.youtube.com/results?search_query=space+rangers+trailer">Watch trailer</a></li>
+        <li><strong>Kampung Comedy</strong> <span>(U)</span> <a href="https://www.youtube.com/results?search_query=kampung+comedy+trailer">Watch trailer</a></li>
+        <li><strong>Ombak Terengganu</strong> <span>(18)</span> <a href="https://www.youtube.com/results?search_query=ombak+terengganu+trailer">Watch trailer</a></li>
+    </ul>
+</div>
+
+<!-- copyright plus promo line -->
+<div id="footer">
+    <p>&copy; 2026 CineKampus. All rights reserved.</p>
+    <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday for Students &amp; Staff</p>
+</div>
+</body>
+</html>
