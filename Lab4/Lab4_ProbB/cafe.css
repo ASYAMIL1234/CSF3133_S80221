@@ -1,0 +1,74 @@
+/* cafe.css */
+
+/* nav */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #6E2C00;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* nav links */
+nav a:link,
+nav a:visited {
+    color: #FFFFFF;
+}
+
+/* hover */
+nav a:hover {
+    background-color: #E67E22;
+    color: #FFFFFF;
+}
+
+/* old price */
+.old-price {
+    text-decoration: line-through;
+    color: #999999;
+}
+
+/* video */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* caption */
+figcaption {
+    font-style: italic;
+    color: #555555;
+}
+
+/* form */
+.feedback-form {
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    background-color: #FDF2E9;
+    border: 2px solid #6E2C00;
+    border-radius: 8px;
+}
+
+.feedback-form fieldset {
+    margin-bottom: 10px;
+}
+
+.feedback-form input[type="submit"] {
+    background-color: #6E2C00;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="cafe.css">
+
+    <style>
+    /* link states */
+    a:link {color: #1A5276;}
+    a:visited {color: #7D3C98;}
+    a:hover {color: #E67E22;}
+    a:active {color: #C0392B;}
+    h1 {text-decoration: overline;}
+    p {color: #333333; text-align: justify;}
+    #intro {
+        font-size: 18px;
+        background-color: #FDEBD0;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #C0392B;
+    }
+    </style>
+</head>
+<body>
+<!--
+    error 1 (line 6): unneeded type
+    error 2 (line 7): wrong comment
+    error 3 (line 9): no -> none
+    error 4 (line 14-15): wrong order
+    error 5 (line 17): overlined -> overline
+    error 6 (line 18): missing colon
+    error 7 (line 21): missing brace
+    error 8 (line 22): missing dot
+    error 9 (line 34): missing #
+    error 10 (line 41): class -> id
+    error 11 (line 42, 46): duplicate id
+    error 12 (line 53): missing controls
+    error 13 (line 54): mp4 -> video/mp4
+-->
+
+<header>
+    <h1>e-Café Campus</h1>
+</header>
+
+<!-- nav -->
+<nav>
+    <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- menu -->
+<section id="menu">
+    <h2>Today's Menu</h2>
+    <p id="intro">Freshly brewed coffee and local delights every day.</p>
+    <article class="item">
+        <h3>Kopi Tarik</h3>
+        <!-- promo -->
+        <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+    </article>
+    <article class="item">
+        <h3>Nasi Lemak</h3>
+        <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+    </article>
+</section>
+
+<!-- video -->
+<section id="video">
+    <h2>Watch Our Story</h2>
+    <figure>
+        <video width="400" height="300" controls>
+            <source src="cafe.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>How we brew our kopi tarik every morning.</figcaption>
+    </figure>
+</section>
+
+<!-- feedback -->
+<section id="feedback">
+    <h2>Give Us Feedback</h2>
+    <form class="feedback-form" action="#" method="post">
+
+        <!-- name, email -->
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- visit type -->
+        <fieldset>
+            <legend>Visit type</legend>
+            <input type="radio" id="dinein" name="visit" value="dine-in" checked>
+            <label for="dinein">Dine-in</label>
+            <input type="radio" id="takeaway" name="visit" value="take-away">
+            <label for="takeaway">Take-away</label>
+        </fieldset>
+
+        <!-- favourites -->
+        <fieldset>
+            <legend>Favourite items</legend>
+            <input type="checkbox" id="kopi" name="favourite" value="kopi-tarik">
+            <label for="kopi">Kopi Tarik</label>
+            <input type="checkbox" id="nasilemak" name="favourite" value="nasi-lemak">
+            <label for="nasilemak">Nasi Lemak</label>
+            <input type="checkbox" id="roti" name="favourite" value="roti-bakar">
+            <label for="roti">Roti Bakar</label>
+        </fieldset>
+
+        <!-- submit -->
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</section>
+
+<!-- footer -->
+<footer id="contact">
+    <p>&copy; 2026 e-Café Campus</p>
+    <address>
+        E-mail: <a href="mailto:ecafe@umt.edu.my">ecafe@umt.edu.my</a>
+    </address>
+</footer>
+</body>
+</html>
