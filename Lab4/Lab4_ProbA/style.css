@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #DAF1DE;
+    color: #051F20;
+    margin: 0;
+}
+
+/* ----- Headings: text decoration ----- */
+h1 {
+    text-decoration: overline;
+    font-size: 40px;
+    margin: 0;
+}
+
+h2 {
+    text-decoration: underline;
+    color: #163832;
+}
+
+/* ----- Navigation bar ----- */
+nav ul {
+    list-style-type: none;      /* remove bullets */
+    margin: 0;
+    padding: 0;
+    background-color: #0B2B26;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;      /* remove underline */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Nav link colours (more specific than the general a:link rules below) */
+nav a:link,
+nav a:visited {
+    color: #DAF1DE;
+}
+
+/* Change menu item background on mouse over */
+nav a:hover {
+    background-color: #8EB69B;
+    color: #051F20;
+}
+
+/* ----- Link states (order: link, visited, hover, active) ----- */
+a:link {
+    color: #235347;
+}
+
+a:visited {
+    color: #163832;
+}
+
+a:hover {
+    color: #8EB69B;
+}
+
+a:active {
+    color: #051F20;
+}
+
+/* ----- Sections (ID selectors) ----- */
+section {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#destinations {
+    text-align: center;
+}
+
+#video {
+    background-color: #163832;
+    border: 1px solid #235347;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+#video h2 {
+    color: #DAF1DE;
+}
+
+#trip h2 {
+    text-align: center;
+}
+
+/* ----- Destination cards (class selectors) ----- */
+.card {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    min-width: 220px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #8EB69B;
+    border: 2px solid #235347;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #235347;
+}
+
+.new-price {
+    color: #051F20;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ----- Video: responsive scaling ----- */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    font-style: italic;
+    color: #8EB69B;
+}
+
+/* ----- Trip form ----- */
+.trip-form {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #8EB69B;
+    border: 2px solid #163832;
+    border-radius: 8px;
+}
+
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+    width: 95%;
+    padding: 6px;
+    border: 1px solid #235347;
+}
+
+.trip-form fieldset {
+    margin-bottom: 10px;
+    border: 1px solid #235347;
+}
+
+.trip-form input[type="submit"] {
+    background-color: #163832;
+    color: #DAF1DE;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.trip-form input[type="submit"]:hover {
+    background-color: #051F20;
+}
+
+/* ----- Footer ----- */
+footer {
+    background-color: #051F20;
+    color: #DAF1DE;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Footer link states (light colours for the dark background) */
+footer a:link {
+    color: #8EB69B;
+}
+
+footer a:visited {
+    color: #DAF1DE;
+}
+
+footer a:hover {
+    background-color: #8EB69B;
+    color: #051F20;
+}
+
+footer a:active {
+    background-color: #235347;
+    color: #DAF1DE;
+}

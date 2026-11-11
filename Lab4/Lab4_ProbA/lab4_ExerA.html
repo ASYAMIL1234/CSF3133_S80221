@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page metadata: character set and viewport for mobile screens -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Terengganu</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Header */
+        header {
+            background-color: #163832;
+            color: #DAF1DE;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        /* Tagline */
+        .tagline {
+            font-style: italic;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== title and tag line ===== -->
+    <header>
+        <h1>Visit Terengganu</h1>
+        <p class="tagline">Islands, food and culture on the East Coast</p>
+    </header>
+
+    <!-- ===== nav bar ===== -->
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#trip">Join a Trip</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== destinations ===== -->
+    <section id="destinations">
+        <h2>Top Destinations</h2>
+
+        <!-- destination 1 -->
+        <article class="card">
+            <h3>Pulau Redang</h3>
+            <p>Crystal-clear water, white sand and some of the best snorkelling spots in Malaysia.</p>
+            <p class="price">
+                <span class="old-price">RM 299</span>
+                <span class="new-price">RM 199</span>
+            </p>
+        </article>
+
+        <!-- destination 2 -->
+        <article class="card">
+            <h3>Tasik Kenyir</h3>
+            <p>The largest man-made lake in Southeast Asia, with waterfalls, caves and houseboat stays.</p>
+            <p class="price">
+                <span class="old-price">RM 250</span>
+                <span class="new-price">RM 180</span>
+            </p>
+        </article>
+
+        <!-- destination 3 -->
+        <article class="card">
+            <h3>Kuala Terengganu Heritage Walk</h3>
+            <p>Masjid Kristal, Pasar Payang and Kampung Cina, with keropok lekor along the way.</p>
+            <p class="price">
+                <span class="old-price">RM 80</span>
+                <span class="new-price">RM 50</span>
+            </p>
+        </article>
+
+        <!-- seat counter -->
+        <p class="center">
+            <label for="seats">Trip seats filled (28 of 40):</label>
+            <meter id="seats" min="0" max="40" value="28">28 of 40</meter>
+        </p>
+    </section>
+
+    <!-- ===== video ===== -->
+    <section id="video">
+        <h2>Watch Terengganu</h2>
+        <figure class="center">
+            <video width="640" height="360" controls>
+                <source src="lab4videopromotion.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption class="caption">A short tour of Terengganu's islands and city.</figcaption>
+        </figure>
+    </section>
+
+    <!-- ===== form ===== -->
+    <section id="trip">
+        <h2>Join a Trip</h2>
+        <form class="trip-form" action="#" method="post">
+
+            <!-- personal detail -->
+            <p>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </p>
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- type -->
+            <fieldset>
+                <legend>Traveller type</legend>
+                <input type="radio" id="student" name="traveller" value="student" checked>
+                <label for="student">Student</label>
+                <input type="radio" id="staff" name="traveller" value="staff">
+                <label for="staff">Staff</label>
+                <input type="radio" id="public" name="traveller" value="public">
+                <label for="public">Public</label>
+            </fieldset>
+
+            <!-- interest -->
+            <fieldset>
+                <legend>Interests</legend>
+                <input type="checkbox" id="islands" name="interest" value="islands">
+                <label for="islands">Islands</label>
+                <input type="checkbox" id="food" name="interest" value="food">
+                <label for="food">Food</label>
+                <input type="checkbox" id="culture" name="interest" value="culture">
+                <label for="culture">Culture</label>
+                <input type="checkbox" id="nature" name="interest" value="nature">
+                <label for="nature">Nature</label>
+            </fieldset>
+
+            <!-- submit -->
+            <p class="center">
+                <button type="submit" value="Submit">Submit</button>
+            </p>
+        </form>
+    </section>
+
+    <!-- ===== copyright and contact address ===== -->
+    <footer id="contact">
+        <p>&copy; 2026 Terengganu Tourism Office</p>
+        <address>
+            Contact us: <a href="mailto:info@visitterengganu.my">info@visitterengganu.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>
