@@ -1,0 +1,68 @@
+/* Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+/* Form */
+label {
+    display: inline-block;
+    width: 110px;
+}
+
+input {
+    padding: 6px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons with hover effect */
+button {
+    padding: 8px 14px;
+    margin: 5px 0;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d6fa5;
+}
+
+/* Result */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#checkedTime {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Grade table */
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
